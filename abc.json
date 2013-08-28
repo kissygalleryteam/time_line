@@ -1,0 +1,14 @@
+{
+    "name": "timeline",
+    "version": "1.0",
+    "desc": "",
+    "cover": "",
+    "tag":"",
+    "author": {
+        "name": "paozhu",
+        "email": "kejun.zkj@alibaba-inc.com‍",
+        "page": ""
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
