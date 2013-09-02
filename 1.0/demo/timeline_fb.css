@@ -1,0 +1,55 @@
+.fb-block{
+  border: 1px solid #c4cde0;
+  padding: 13px 15px;
+  background-color:#fff;
+}
+.fb-title{
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+.fb-title h1{
+  margin:0px;
+  padding:0px;
+  font-size: 15px;
+}
+.fb-title h2{
+  margin:0px;
+  padding:0px;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 3px;
+  text-align: right;
+}
+.fb-content p{
+  font-size: 14px;
+  line-height: 18px;
+  margin:0px;
+}
+.fb-left-pointer{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v2/yZ/r/4Km5aClLK8Z.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -747px -27px;
+  left: auto;
+  right: -18px;
+  position:absolute;
+  top: 20px;
+  width: 19px;
+  z-index: 1;
+  height: 15px;
+}
+.fb-right-pointer{
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v2/yZ/r/4Km5aClLK8Z.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -727px -27px;
+  height: 15px;
+  left: -17px;
+  position: absolute;
+  top: 20px;
+  width: 19px;
+}
+.tl-line{
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v2/yD/r/N8eF8pLkCCD.png) repeat-y center top;"
+}

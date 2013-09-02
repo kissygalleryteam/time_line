@@ -1,9 +1,9 @@
 {
     "name": "timeline",
     "version": "1.0",
-    "desc": "",
+    "desc": "自动生成Timeline布局组件",
     "cover": "",
-    "tag":"",
+    "tag":"timeline",
     "author": {
         "name": "paozhu",
         "email": "kejun.zkj@alibaba-inc.com‍",

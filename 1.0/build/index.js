@@ -1,9 +1,15 @@
+/*
+combined files : 
+
+gallery/timeline/1.0/index
+
+*/
 /**
  * @fileoverview 
  * @author paozhu<kejun.zkj@alibaba-inc.com
  * @module timeline
  **/
-KISSY.add(function (S, Node, Base) {
+KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
   var D = S.DOM,
       $ = Node.all;
 
@@ -252,5 +258,6 @@ KISSY.add(function (S, Node, Base) {
 
   return Timeline;
 }, {requires:['node', 'base']});
+
 
 
