@@ -1,7 +1,7 @@
 {
-    "name": "timeline",
+    "name": "Time_line",
     "version": "1.0",
-    "desc": "自动生成Timeline布局组件",
+    "desc": "自动生成Time_line布局组件",
     "cover": "",
     "tag":"timeline",
     "author": {

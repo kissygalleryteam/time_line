@@ -1,15 +1,15 @@
 /*
 combined files : 
 
-gallery/timeline/1.0/index
+1.0/index
 
 */
 /**
  * @fileoverview 
  * @author paozhu<kejun.zkj@alibaba-inc.com
- * @module timeline
+ * @module time_line
  **/
-KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
+KISSY.add('1.0/index',function (S, Node, Base) {
   var D = S.DOM,
       $ = Node.all;
 
@@ -26,11 +26,11 @@ KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
   };
 
   // 工厂风格的构造器
-  var Timeline = function(){
+  var Time_line = function(){
     this._init.apply(this, arguments);
   };
 
-  S.augment(Timeline,{
+  S.augment(Time_line,{
 
     _init: function(target, data, opt){
 
@@ -84,7 +84,7 @@ KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
 
       S.each({
         start_pos:       "left",
-        //load_style:      ["timeline_fb"]
+        //load_style:      ["time_line_fb"]
         container_width:    600, 
         line_width:         28,
         item_gap_space:     30,
@@ -208,7 +208,7 @@ KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
 
     },
 
-    //计算当前timeline 的高度
+    //计算当前time_line 的高度
     _calHeight: function() {
 
       var last = D.last(this.target);
@@ -256,7 +256,7 @@ KISSY.add('gallery/timeline/1.0/index',function (S, Node, Base) {
 
   });
 
-  return Timeline;
+  return Time_line;
 }, {requires:['node', 'base']});
 
 

@@ -1,6 +1,6 @@
 ## 综述
 
-Timeline是一个根据给定数据自动生成Timeline布局的高度自定义组件。
+Time_line是一个根据给定数据自动生成Time_line布局的高度自定义组件。
 
 * Author: 跑猪
 
@@ -9,15 +9,15 @@ Timeline是一个根据给定数据自动生成Timeline布局的高度自定义�
 
 
 
-    S.use('gallery/timeline/1.0/index', function (S, Timeline) {
-         var timeline = new Timeline('#id',data [,opt]);
+    S.use('gallery/timeline/1.0/index', function (S, Time_line) {
+         var timeline = new Time_line('#id',data [,opt]);
     })
     
 
 
 ## API说明
 
-Timeline类接受三个参数。例如 `new Timeline('#id',data [,opt])`
+Time_line类接受三个参数。例如 `new Time_line('#id',data [,opt])`
 
 ### 参数一：容器
 
@@ -111,11 +111,11 @@ PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时
     </head>
     
     <body>
-      <h2>Timeline的demo</h2>
+      <h2>Time_line的demo</h2>
       <!-- timeline 容器-->
       <div id="container" style="margin:0 auto"></div>
       <script>
-        KISSY.use('gallery/timeline/1.0/index', function (S, Timeline) {
+        KISSY.use('gallery/timeline/1.0/index', function (S, Time_line) {
           var test_data = [{
               "template": "start_temp",
               "content": "记录生活的点点滴滴"
@@ -142,7 +142,7 @@ PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时
                 "content": "跑步1小时"
             }];
     
-            new Timeline("#container",test_data,{ 
+            new Time_line("#container",test_data,{ 
                 start_pos: "center",
                 html_template:{
                   "start_temp": "<div class='green_mark'><h1>{content}</h1></div>",

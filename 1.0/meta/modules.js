@@ -1,3 +1,3 @@
 config({
-    'gallery/timeline/index': {requires: ['node','base']}
+    'gallery/time_line/index': {requires: ['node','base']}
 });
