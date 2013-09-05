@@ -1,23 +1,24 @@
 ## 综述
 
-Time_line是一个根据给定数据自动生成Time_line布局的高度自定义组件。
+time_line是一个根据给定数据自动生成time_line布局的高度自定义组件。
 
 * Author: 跑猪
+* Github: https://github.com/KJlmfe/time_line
 
 
 ## 快速使用
 
 
 
-    S.use('gallery/timeline/1.0/index', function (S, Time_line) {
-         var timeline = new Time_line('#id',data [,opt]);
+    S.use('gallery/time_line/1.0/index', function (S, Time_line) {
+         var time_line = new Time_line('#id',data [,opt]);
     })
     
 
 
 ## API说明
 
-Time_line类接受三个参数。例如 `new Time_line('#id',data [,opt])`
+time_line类接受三个参数。例如 `new Time_line('#id',data [,opt])`
 
 ### 参数一：容器
 
@@ -62,11 +63,11 @@ PS：以上宽度、间距单位都为px。
      	background:#aabbcc;
      }
 
-如果你想使用组件里默认时间线样式，手动引入“timeline_fb.css”即可。
+如果你想使用组件里默认时间线样式，手动引入“timeline_fb.css” http://gallery.kissyui.com/time_line/1.0/demo/time_line_fb.css 即可。
 
 ### 条目模板
 
-组件里带一个默认模板“fb”，其html结构如下。如果需要使用该模板，需要手动引入“timeline_fb.css”
+组件里带一个默认模板“fb”，其html结构如下。如果需要使用该模板，需要手动引入“timeline_fb.css” http://gallery.kissyui.com/time_line/1.0/demo/time_line_fb.css
 
       <div class='fb-block'>
         <div class='fb-title'><h1>{title}</h1><h2>{date}</h2></div>"
@@ -76,9 +77,14 @@ PS：以上宽度、间距单位都为px。
      
 PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时，{xxx}会被数据项xxx属性值所替换。
 
+## Demo
+
+猛点 http://gallery.kissyui.com/time_line/1.0/demo/index.html
+
 ## 使用示例
 
 ### 代码
+
     <!doctype html>
     <html>
     <head>
@@ -86,7 +92,7 @@ PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时
         <title>timeline的demo</title>
         <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js" charset="utf-8"></script>
         <!-- 引入自带的fb模板 -->
-        <link rel="stylesheet" href="./timeline_fb.css">
+        <link rel="stylesheet" href="http://gallery.kissyui.com/time_line/1.0/demo/time_line_fb.css">
         <!-- 为自定义模板 定义样式 -->
         <style>
           .blue_mark {
@@ -115,7 +121,7 @@ PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时
       <!-- timeline 容器-->
       <div id="container" style="margin:0 auto"></div>
       <script>
-        KISSY.use('gallery/timeline/1.0/index', function (S, Time_line) {
+        KISSY.use('gallery/time_line/1.0/index', function (S, Time_line) {
           var test_data = [{
               "template": "start_temp",
               "content": "记录生活的点点滴滴"
