@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>time_line的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js" charset="utf-8"></script>
+    <!-- 引入自带的fb模板 -->
+    <link rel="stylesheet" href="./time_line_fb.css">
+    <!-- 为自定义模板 定义样式 -->
+    <style>
+      .blue_mark {
+        background-image: -webkit-gradient(linear,0 0,0 2.0.0%,from(#08c),to(#04c));
+        border-radius: 6px;
+        text-align: center;
+      }
+      .blue_mark h1{
+        font-size: 15px;
+        color: #fff;
+        padding: 10px;
+        margin: 0px;
+      }
+      .green_mark{
+        color: #fff;
+        text-align:center;
+        font-size: 13px;
+        padding: 6px 0;
+        background: #6bb2.0.0;
+      }
+   </style>
+<script>var S = KISSY;S.config({packages:[{name:"kg",path:"http://g.tbcdn.cn/kg/",charset:"utf-8",ignorePackageNameInUri:true}]});if (S.Config.debug){var srcPath = "../";S.config({packages:[{name:"kg/time_line/2.0.0",path:srcPath,charset:"utf-8",ignorePackageNameInUri:true}]});}</script></head>
+
+<body>
+  <h2>Time_line的demo</h2>
+  <!-- time_line 容器-->
+  <div id="container" style="margin:0 auto"></div>
+  <script>
+    var S = KISSY;
+    S.Config.debug = true;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery-back",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+    S.use('kg/time_line/2.0.0/index', function (S, Time_line) {
+      var test_data = [{
+          "template": "start_temp",
+          "content": "记录生活的点点滴滴"
+        }, {
+            "date": "2013-8-1",
+            "title": "运动",
+            "content": "跑步30分钟"
+        },{
+            "date": "2013-8-3",
+            "title": "运动",
+            "content": "游泳40分钟"
+        },{
+            "date": "2013-8-6",
+            "title": "读书",
+            "content": "看《黑客与画家》20分钟",
+        },{
+            "template": "mark_temp",
+            "pos": "center",
+            "summarize": "加油，已累计运动1小时10分钟了",
+        },{
+            "date": "2013-8-10",
+            "pos" : "right",
+            "title": "运动",
+            "content": "跑步1小时"
+        }];
+
+        new Time_line("#container",test_data,{ 
+            start_pos: "center",
+            html_template:{
+              "start_temp": "<div class='green_mark'><h1>{content}</h1></div>",
+              "mark_temp": "<div class='blue_mark'><h1>{summarize}</h1></div>"
+            },
+            top_gap_space:0,
+            bottom_gap_space:30,
+        });
+    })
+  </script>
+</body>
+</html>
