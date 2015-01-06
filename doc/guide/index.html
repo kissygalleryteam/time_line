@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>time_line</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">time_line</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/undefined" target="_blank" data-name="paozhu" class="author"><img src="http://0.gravatar.com/avatar/88afde804152f7ad41673805b33521ce?s=60" alt="paozhu"></a><span class="author-name">paozhu</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/time_line" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="time_line" class="J_View">352</span></p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><h2 id="-">综述</h2>
+<p>Time_line是一个根据给定数据自动生成Time_line布局的高度自定义组件。</p>
+<ul>
+<li>Author: 跑猪</li>
+</ul>
+<h2 id="-">快速使用</h2>
+<pre><code>S.use(&#39;kg/timeline/2.0.0/index&#39;, function (S, Time_line) {
+     var timeline = new Time_line(&#39;#id&#39;,data [,opt]);
+})
+</code></pre><h2 id="api-">API说明</h2>
+<p>Time_line类接受三个参数。例如 <code>new Time_line(&#39;#id&#39;,data [,opt])</code></p>
+<h3 id="-">参数一：容器</h3>
+<p>第一个参数是组件容器选择符，例如#id，其他方式详见<a href="http://docs.kissyui.com/docs/html/api/core/dom/selector.html">http://docs.kissyui.com/docs/html/api/core/dom/selector.html</a></p>
+<h3 id="-">参数二：数据项说明</h3>
+<p>第二个参数是一个数组，数组中每项存储一个对象，对象属性说明如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template</td>
+<td>String</td>
+<td>“fb”</td>
+<td>该条数据对应的html模板名</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>Enum(&quot;left&quot;,&quot;right&quot;,&quot;center&quot;)</td>
+<td>自动计算(左右交替)</td>
+<td>该条数据的位置，&quot;left&quot;,&quot;right&quot;,&quot;center&quot;</td>
+</tr>
+<tr>
+<td>xxx</td>
+<td></td>
+<td></td>
+<td>自定义属性</td>
+</tr>
+<tr>
+<td>yyy</td>
+<td></td>
+<td></td>
+<td>自定义属性</td>
+</tr>
+<tr>
+<td>…</td>
+<td></td>
+<td></td>
+<td>可根据自己条目html模板结构，添加自定义属性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">参数三：配置项说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>html_template</td>
+<td>Array</td>
+<td>[fb]</td>
+<td>条目html模板</td>
+</tr>
+<tr>
+<td>start_pos</td>
+<td>Enum(&quot;left&quot;,&quot;right&quot;,&quot;center&quot;)</td>
+<td>&quot;left&quot;</td>
+<td>首条目的位置</td>
+</tr>
+<tr>
+<td>container_width</td>
+<td>Number</td>
+<td>600</td>
+<td>timeline容器的宽度</td>
+</tr>
+<tr>
+<td>line_width</td>
+<td>Number</td>
+<td>28</td>
+<td>中间时间轴的宽度</td>
+</tr>
+<tr>
+<td>item_gap_space</td>
+<td>Number</td>
+<td>30</td>
+<td>各条目之间的间距</td>
+</tr>
+<tr>
+<td>top_gap_space</td>
+<td>Number</td>
+<td>15</td>
+<td>首条目与容器间距</td>
+</tr>
+<tr>
+<td>bottom_gap_space</td>
+<td>Number</td>
+<td>15</td>
+<td>末条目与容器间距</td>
+</tr>
+</tbody>
+</table>
+<p>PS：以上宽度、间距单位都为px。</p>
+<h2 id="-">模板样式</h2>
+<h3 id="-">时间线样式</h3>
+<p>中间的时间线是一个div：<code>&lt;div class=&quot;tl-line&quot;&gt;&lt;/div&gt;</code> ，请根据自己需要，为其添加css样式，例如：</p>
+<pre><code> .tl-line{
+     background:#aabbcc;
+ }
+</code></pre><p>如果你想使用组件里默认时间线样式，手动引入“timeline_fb.css”即可。</p>
+<h3 id="-">条目模板</h3>
+<p>组件里带一个默认模板“fb”，其html结构如下。如果需要使用该模板，需要手动引入“timeline_fb.css”</p>
+<pre><code>  &lt;div class=&#39;fb-block&#39;&gt;
+    &lt;div class=&#39;fb-title&#39;&gt;&lt;h1&gt;{title}&lt;/h1&gt;&lt;h2&gt;{date}&lt;/h2&gt;&lt;/div&gt;&quot;
+      &lt;div class=&#39;fb-content&#39;&gt;&lt;p&gt;{content}&lt;/p&gt;&lt;/div&gt;&quot;
+    &lt;/div&gt;&quot;
+  &lt;i class=&#39;fb-{pos}-pointer&#39;&gt;&lt;/i&gt;&quot;;`
+</code></pre><p>PS：模板里{xxx}的内容，与数据项中xxx属性所对应，生成html时，{xxx}会被数据项xxx属性值所替换。</p>
+<h2 id="-">使用示例</h2>
+<h3 id="-">代码</h3>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;title&gt;timeline的demo&lt;/title&gt;
+    &lt;script src=&quot;http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;!-- 引入自带的fb模板 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./timeline_fb.css&quot;&gt;
+    &lt;!-- 为自定义模板 定义样式 --&gt;
+    &lt;style&gt;
+      .blue_mark {
+        background-image: -webkit-gradient(linear,0 0,0 2.0.0%,from(#08c),to(#04c));
+        border-radius: 6px;
+        text-align: center;
+      }
+      .blue_mark h1{
+        font-size: 15px;
+        color: #fff;
+        padding: 10px;
+        margin: 0px;
+      }
+      .green_mark{
+        color: #fff;
+        text-align:center;
+        font-size: 13px;
+        padding: 6px 0;
+        background: #6bb2.0.0;
+      }
+   &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;Time_line的demo&lt;/h2&gt;
+  &lt;!-- timeline 容器--&gt;
+  &lt;div id=&quot;container&quot; style=&quot;margin:0 auto&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    KISSY.use(&#39;kg/timeline/2.0.0/index&#39;, function (S, Time_line) {
+      var test_data = [{
+          &quot;template&quot;: &quot;start_temp&quot;,
+          &quot;content&quot;: &quot;记录生活的点点滴滴&quot;
+        }, {
+            &quot;date&quot;: &quot;2013-8-1&quot;,
+            &quot;title&quot;: &quot;运动&quot;,
+            &quot;content&quot;: &quot;跑步30分钟&quot;
+        },{
+            &quot;date&quot;: &quot;2013-8-3&quot;,
+            &quot;title&quot;: &quot;运动&quot;,
+            &quot;content&quot;: &quot;游泳40分钟&quot;
+        },{
+            &quot;date&quot;: &quot;2013-8-6&quot;,
+            &quot;title&quot;: &quot;读书&quot;,
+            &quot;content&quot;: &quot;看《黑客与画家》20分钟&quot;,
+        },{
+            &quot;template&quot;: &quot;mark_temp&quot;,
+            &quot;pos&quot;: &quot;center&quot;,
+            &quot;summarize&quot;: &quot;加油，已累计运动1小时10分钟了&quot;,
+        },{
+            &quot;date&quot;: &quot;2013-8-10&quot;,
+            &quot;pos&quot; : &quot;right&quot;,
+            &quot;title&quot;: &quot;运动&quot;,
+            &quot;content&quot;: &quot;跑步1小时&quot;
+        }];
+
+        new Time_line(&quot;#container&quot;,test_data,{ 
+            start_pos: &quot;center&quot;,
+            html_template:{
+              &quot;start_temp&quot;: &quot;&lt;div class=&#39;green_mark&#39;&gt;&lt;h1&gt;{content}&lt;/h1&gt;&lt;/div&gt;&quot;,
+              &quot;mark_temp&quot;: &quot;&lt;div class=&#39;blue_mark&#39;&gt;&lt;h1&gt;{summarize}&lt;/h1&gt;&lt;/div&gt;&quot;
+            },
+            top_gap_space:0,
+            bottom_gap_space:30,
+        });
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="-">效果</h3>
+<p><img src="./demo.png" alt="图片加载失败"></p>
+
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
